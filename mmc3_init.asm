@@ -11,4 +11,4 @@ LDA #$07 ;
 STA $8000 ; Select 8 KB PRG ROM bank at $A000-$BFFF
 LDA #$01 ;
 STA $8001 ;
-
+JMP $8000 ;
