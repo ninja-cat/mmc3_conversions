@@ -18,7 +18,7 @@ BSLCT:
     STA $8001 ; set new bank value ; 4
     AND #$18 ; ; 2
     INY ; select CHR bank (Y) ; 2
-    CPY $#06 ; 2
+    CPY #$06 ; 2
     BNE BSLCT ; 2-4
 ;
 PLA ; restore Y ; 4
