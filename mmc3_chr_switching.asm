@@ -1,7 +1,7 @@
 ;;; it's gonna emulate 8k CHR CN-ROM banking
 ;;; by MMC3 assuming that CN-ROM CHR #BANK stored in X
 ;;; ~116 cpu's ticks required
-;;; compiled to 77 bytes
+;;; compiled obj size: 77 bytes
 PHA ; store A ; 3
 TYA ; A = Y ; 2
 PHA ; store Y ; 3

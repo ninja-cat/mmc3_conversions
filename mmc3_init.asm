@@ -1,5 +1,6 @@
 ;;;
 ; perform mmc3 init
+;; compiled obj size: 31 bytes
 STA $E000 ; IRQ disable
 LDA #$00 ;
 STA $A000 ; Mirroring: vertical
