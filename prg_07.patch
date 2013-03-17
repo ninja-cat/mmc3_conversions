@@ -1,0 +1,354 @@
+--- orig.p	2013-03-17 11:53:20.682886840 +0400
++++ new.p	2013-03-17 18:59:53.954887184 +0400
+@@ -10615,7 +10615,7 @@
+ C677: 86 83    | STX $83
+ C679: 60       | RTS
+ C67A: A9 07    | LDA #$07
+-C67C: 8D 10 C0 | STA $C010
++C67C: 20 C8 FF | JSR $FFC8
+ C67F: EA       | NOP
+ C680: EA       | NOP
+ C681: A0 00    | LDY #$00
+@@ -10766,10 +10766,10 @@
+ C786: A9 FF    | LDA #$FF
+ C788: 85 09    | STA $09
+ C78A: 60       | RTS
+-C78B: 8D 10 C0 | STA $C010
++C78B: 20 C8 FF | JSR $FFC8
+ C78E: 20 97 C7 | JSR $C797
+ C791: A9 0E    | LDA #$0E
+-C793: 8D 10 C0 | STA $C010
++C793: 20 C8 FF | JSR $FFC8
+ C796: 60       | RTS
+ C797: A0 00    | LDY #$00
+ C799: B1 0A    | LDA ($0A),Y
+@@ -10788,10 +10788,10 @@
+ C7AF: CA       | DEX
+ C7B0: D0 F8    | BNE $C7AA
+ C7B2: 60       | RTS
+-C7B3: 8D 10 C0 | STA $C010
++C7B3: 20 C8 FF | JSR $FFC8
+ C7B6: 20 BF C7 | JSR $C7BF
+ C7B9: A9 0E    | LDA #$0E
+-C7BB: 8D 10 C0 | STA $C010
++C7BB: 20 C8 FF | JSR $FFC8
+ C7BE: 60       | RTS
+ C7BF: A9 00    | LDA #$00
+ C7C1: 85 00    | STA $00
+@@ -10839,7 +10839,7 @@
+ C815: 60       | RTS
+ C816: 20 1F C8 | JSR $C81F
+ C819: A9 0E    | LDA #$0E
+-C81B: 8D 10 C0 | STA $C010
++C81B: 20 C8 FF | JSR $FFC8
+ C81E: 60       | RTS
+ C81F: A2 34    | LDX #$34
+ C821: 8E 34 03 | STX $0334
+@@ -10860,7 +10860,7 @@
+ C840: A2 20    | LDX #$20
+ C842: 20 A8 C7 | JSR $C7A8
+ C845: A9 09    | LDA #$09
+-C847: 8D 10 C0 | STA $C010
++C847: 20 C8 FF | JSR $FFC8
+ C84A: A9 00    | LDA #$00
+ C84C: 85 0A    | STA $0A
+ C84E: A9 A3    | LDA #$A3
+@@ -11895,7 +11895,7 @@
+ D06E: A9 00    | LDA #$00
+ D070: 8D 51 03 | STA $0351
+ D073: A9 0E    | LDA #$0E
+-D075: 8D 10 C0 | STA $C010
++D075: 20 C8 FF | JSR $FFC8
+ D078: 20 42 85 | JSR $8542
+ D07B: A9 03    | LDA #$03
+ D07D: 8D 4E 03 | STA $034E
+@@ -15075,7 +15075,7 @@
+ EAA7: 18       | CLC
+ EAA8: 65 3B    | ADC $3B
+ EAAA: 8D 05 20 | STA $2005
+-EAAD: AD 34 03 | LDA $0334
++EAAD: 4C 30 FF | JMP $FF30
+ EAB0: 8D 00 C0 | STA $C000
+ EAB3: AD 35 03 | LDA $0335
+ EAB6: 8D 01 C0 | STA $C001
+@@ -15142,57 +15142,57 @@
+ EB3E: 78       | SEI
+ EB3F: EB       | ???
+ EB40: A9 0B    | LDA #$0B
+-EB42: 8D 10 C0 | STA $C010
++EB42: 20 C8 FF | JSR $FFC8
+ EB45: 4C 05 82 | JMP $8205
+ EB48: A9 0E    | LDA #$0E
+-EB4A: 8D 10 C0 | STA $C010
++EB4A: 20 C8 FF | JSR $FFC8
+ EB4D: 4C 10 80 | JMP $8010
+ EB50: A9 0E    | LDA #$0E
+-EB52: 8D 10 C0 | STA $C010
++EB52: 20 C8 FF | JSR $FFC8
+ EB55: 4C A2 81 | JMP $81A2
+ EB58: A9 0E    | LDA #$0E
+-EB5A: 8D 10 C0 | STA $C010
++EB5A: 20 C8 FF | JSR $FFC8
+ EB5D: 4C CA 84 | JMP $84CA
+ EB60: A9 0E    | LDA #$0E
+-EB62: 8D 10 C0 | STA $C010
++EB62: 20 C8 FF | JSR $FFC8
+ EB65: 4C BD 86 | JMP $86BD
+ EB68: A9 0E    | LDA #$0E
+-EB6A: 8D 10 C0 | STA $C010
++EB6A: 20 C8 FF | JSR $FFC8
+ EB6D: 4C 90 89 | JMP $8990
+ EB70: A9 0E    | LDA #$0E
+-EB72: 8D 10 C0 | STA $C010
++EB72: 20 C8 FF | JSR $FFC8
+ EB75: 4C 90 8A | JMP $8A90
+ EB78: A9 0E    | LDA #$0E
+-EB7A: 8D 10 C0 | STA $C010
++EB7A: 20 C8 FF | JSR $FFC8
+ EB7D: 4C 81 8B | JMP $8B81
+ EB80: A9 0E    | LDA #$0E
+-EB82: 8D 10 C0 | STA $C010
++EB82: 20 C8 FF | JSR $FFC8
+ EB85: 4C 59 90 | JMP $9059
+ EB88: A9 0E    | LDA #$0E
+-EB8A: 8D 10 C0 | STA $C010
++EB8A: 20 C8 FF | JSR $FFC8
+ EB8D: 4C 9C 91 | JMP $919C
+ EB90: A9 0E    | LDA #$0E
+-EB92: 8D 10 C0 | STA $C010
++EB92: 20 C8 FF | JSR $FFC8
+ EB95: 4C A9 91 | JMP $91A9
+ EB98: A9 0E    | LDA #$0E
+-EB9A: 8D 10 C0 | STA $C010
++EB9A: 20 C8 FF | JSR $FFC8
+ EB9D: 4C FD 91 | JMP $91FD
+ EBA0: A9 0E    | LDA #$0E
+-EBA2: 8D 10 C0 | STA $C010
++EBA2: 20 C8 FF | JSR $FFC8
+ EBA5: 4C 4F 96 | JMP $964F
+ EBA8: A9 0E    | LDA #$0E
+-EBAA: 8D 10 C0 | STA $C010
++EBAA: 20 C8 FF | JSR $FFC8
+ EBAD: 4C 8D 96 | JMP $968D
+ EBB0: A9 0D    | LDA #$0D
+-EBB2: 8D 10 C0 | STA $C010
++EBB2: 20 C8 FF | JSR $FFC8
+ EBB5: 4C 0A 82 | JMP $820A
+ EBB8: A9 0D    | LDA #$0D
+-EBBA: 8D 10 C0 | STA $C010
++EBBA: 20 C8 FF | JSR $FFC8
+ EBBD: 4C C4 81 | JMP $81C4
+ EBC0: A9 0D    | LDA #$0D
+-EBC2: 8D 10 C0 | STA $C010
++EBC2: 20 C8 FF | JSR $FFC8
+ EBC5: 4C 4B C0 | JMP $C04B
+-EBC8: 4C 80 FF | JMP $FF80
++EBC8: 4C 78 FF | JMP $FF78
+ EBCB: 40       | RTI
+ EBCC: 0F       | ???
+ EBCD: 08       | PHP
+@@ -19192,114 +19192,54 @@
+ FF11: FF       | ???
+ FF12: FF       | ???
+ FF13: FF       | ???
+-FF14: FF       | ???
+-FF15: FF       | ???
+-FF16: FF       | ???
+-FF17: FF       | ???
+-FF18: FF       | ???
+-FF19: FF       | ???
+-FF1A: FF       | ???
+-FF1B: FF       | ???
+-FF1C: FF       | ???
+-FF1D: FF       | ???
+-FF1E: FF       | ???
+-FF1F: FF       | ???
+-FF20: FF       | ???
+-FF21: FF       | ???
+-FF22: FF       | ???
+-FF23: FF       | ???
+-FF24: FF       | ???
+-FF25: FF       | ???
+-FF26: FF       | ???
+-FF27: FF       | ???
+-FF28: FF       | ???
+-FF29: FF       | ???
+-FF2A: FF       | ???
+-FF2B: FF       | ???
+-FF2C: FF       | ???
++FF14: 48       | PHA
++FF15: A9 06    | LDA #$06
++FF17: 8D 00 80 | STA $8000
++FF1A: 8A       | TXA
++FF1B: 0A       | ASL A
++FF1C: 8D 01 80 | STA $8001
++FF1F: 09 01    | ORA #$01
++FF21: 48       | PHA
++FF22: A9 07    | LDA #$07
++FF24: 8D 00 80 | STA $8000
++FF27: 68       | PLA
++FF28: 8D 01 80 | STA $8001
++FF2B: 68       | PLA
++FF2C: 60       | RTS
+ FF2D: FF       | ???
+ FF2E: FF       | ???
+ FF2F: FF       | ???
+-FF30: FF       | ???
+-FF31: FF       | ???
+-FF32: FF       | ???
+-FF33: FF       | ???
+-FF34: FF       | ???
+-FF35: FF       | ???
+-FF36: FF       | ???
+-FF37: FF       | ???
+-FF38: FF       | ???
+-FF39: FF       | ???
+-FF3A: FF       | ???
+-FF3B: FF       | ???
+-FF3C: FF       | ???
+-FF3D: FF       | ???
+-FF3E: FF       | ???
+-FF3F: FF       | ???
+-FF40: FF       | ???
+-FF41: FF       | ???
+-FF42: FF       | ???
+-FF43: FF       | ???
+-FF44: FF       | ???
+-FF45: FF       | ???
+-FF46: FF       | ???
+-FF47: FF       | ???
+-FF48: FF       | ???
+-FF49: FF       | ???
+-FF4A: FF       | ???
+-FF4B: FF       | ???
+-FF4C: FF       | ???
+-FF4D: FF       | ???
+-FF4E: FF       | ???
+-FF4F: FF       | ???
+-FF50: FF       | ???
+-FF51: FF       | ???
+-FF52: FF       | ???
+-FF53: FF       | ???
+-FF54: FF       | ???
+-FF55: FF       | ???
+-FF56: FF       | ???
+-FF57: FF       | ???
+-FF58: FF       | ???
+-FF59: FF       | ???
+-FF5A: FF       | ???
+-FF5B: FF       | ???
+-FF5C: FF       | ???
+-FF5D: FF       | ???
+-FF5E: FF       | ???
+-FF5F: FF       | ???
+-FF60: FF       | ???
+-FF61: FF       | ???
+-FF62: FF       | ???
+-FF63: FF       | ???
+-FF64: FF       | ???
+-FF65: FF       | ???
+-FF66: FF       | ???
+-FF67: FF       | ???
+-FF68: FF       | ???
+-FF69: FF       | ???
+-FF6A: FF       | ???
+-FF6B: FF       | ???
+-FF6C: FF       | ???
+-FF6D: FF       | ???
+-FF6E: FF       | ???
+-FF6F: FF       | ???
+-FF70: FF       | ???
+-FF71: FF       | ???
+-FF72: FF       | ???
+-FF73: FF       | ???
+-FF74: FF       | ???
++FF30: A9 00    | LDA #$00
++FF32: 8D 00 80 | STA $8000
++FF35: AD 34 03 | LDA $0334
++FF38: 8D 01 80 | STA $8001
++FF3B: A9 01    | LDA #$01
++FF3D: 8D 00 80 | STA $8000
++FF40: AD 36 03 | LDA $0336
++FF43: 8D 01 80 | STA $8001
++FF46: A9 02    | LDA #$02
++FF48: 8D 00 80 | STA $8000
++FF4B: AD 38 03 | LDA $0338
++FF4E: 8D 01 80 | STA $8001
++FF51: A9 03    | LDA #$03
++FF53: 8D 00 80 | STA $8000
++FF56: AD 39 03 | LDA $0339
++FF59: 8D 01 80 | STA $8001
++FF5C: A9 04    | LDA #$04
++FF5E: 8D 00 80 | STA $8000
++FF61: AD 3A 03 | LDA $033A
++FF64: 8D 01 80 | STA $8001
++FF67: A9 05    | LDA #$05
++FF69: 8D 00 80 | STA $8000
++FF6C: AD 3B 03 | LDA $033B
++FF6F: 8D 01 80 | STA $8001
++FF72: 4C DD EA | JMP $EADD
+ FF75: FF       | ???
+ FF76: FF       | ???
+ FF77: FF       | ???
+-FF78: FF       | ???
+-FF79: FF       | ???
+-FF7A: FF       | ???
+-FF7B: FF       | ???
+-FF7C: FF       | ???
+-FF7D: FF       | ???
+-FF7E: FF       | ???
+-FF7F: FF       | ???
++FF78: 8D 00 E0 | STA $E000
++FF7B: A9 80    | LDA #$80
++FF7D: 8D 01 A0 | STA $A001
+ FF80: 78       | SEI
+ FF81: D8       | CLD
+ FF82: A9 00    | LDA #$00
+@@ -19335,32 +19275,21 @@
+ FFC3: 4C C3 FF | JMP $FFC3
+ FFC6: FF       | ???
+ FFC7: FF       | ???
+-FFC8: FF       | ???
+-FFC9: FF       | ???
+-FFCA: FF       | ???
+-FFCB: FF       | ???
+-FFCC: FF       | ???
+-FFCD: FF       | ???
+-FFCE: FF       | ???
+-FFCF: FF       | ???
+-FFD0: FF       | ???
+-FFD1: FF       | ???
+-FFD2: FF       | ???
+-FFD3: FF       | ???
+-FFD4: FF       | ???
+-FFD5: FF       | ???
+-FFD6: FF       | ???
+-FFD7: FF       | ???
+-FFD8: FF       | ???
+-FFD9: FF       | ???
+-FFDA: FF       | ???
+-FFDB: FF       | ???
+-FFDC: FF       | ???
+-FFDD: FF       | ???
+-FFDE: FF       | ???
+-FFDF: FF       | ???
+-FFE0: FF       | ???
+-FFE1: FF       | ???
++FFC8: 48       | PHA
++FFC9: 48       | PHA
++FFCA: A9 06    | LDA #$06
++FFCC: 8D 00 80 | STA $8000
++FFCF: 68       | PLA
++FFD0: 0A       | ASL A
++FFD1: 8D 01 80 | STA $8001
++FFD4: 09 01    | ORA #$01
++FFD6: 48       | PHA
++FFD7: A9 07    | LDA #$07
++FFD9: 8D 00 80 | STA $8000
++FFDC: 68       | PLA
++FFDD: 8D 01 80 | STA $8001
++FFE0: 68       | PLA
++FFE1: 60       | RTS
+ FFE2: FF       | ???
+ FFE3: FF       | ???
+ FFE4: FF       | ???
